@@ -425,15 +425,32 @@ def main():                                 # Main game function.
                             and (red[i].x0 == redhome[i].x) and (red[i].y0 == redhome[i].y)):
                             print("woila ")
 
-                            if rolls[0 + nc] == 6 or rolls[0 + nc] == 1:                 #If a six occurs and gamepiece is in home
-                                                                    #Game piece is moved onto the home box
-                                red[i].x0 = redbox[0].x
-                                red[i].y0 = redbox[0].y
-                                red[i].x = redbox[0].x + 25
-                                red[i].y = redbox[0].y + 25
+                            if rolls[0 + nc] == 6 or rolls[0 + nc] == 1:
+                                print('-----------antes-------------')
+                                print('red[i].x0: ',red[i].x0)
+                                print('red[i].y0: ',red[i].y0)
+                                print('red[i].x: ',red[i].x)
+                                print('red[i].y: ',red[i].y)              #If a six occurs and gamepiece is in home  #Game piece is moved onto the home box
+                                print('-----------despues-------------')
+                                red[i].x0 = redbox[0].x                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X
+                                print('red[i].x0: ',red[i].x0)
+                                red[i].y0 = redbox[0].y                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y
+                                print('red[i].y0: ',red[i].y0)
+                                red[i].x = redbox[0].x + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('red[i].x: ',red[i].x)
+                                red[i].y = redbox[0].y + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('red[i].y: ',red[i].y)
                                 red[i].num = 0
                                 red[i].swap()
                                 nc = nc + 1
+
+                                for k in range(len(red)):
+                                    print('k--->',k)
+                                    print('red[k].x0: ',red[k].x0)
+                                    print('red[k].y0: ',red[k].y0)                  #LO QUE GUARDA EL VECTOR red[k] ES LA POSICION DE CADA UNA DE LAS PIEZAS, EN 0TODO EL JUEGO
+                                    print('red[k].x: ',red[k].x)                    #CONSIDERO QUE LO QUE TENEMOS QUE ENVIAR SERIAN LOS VECTORES RED, BLUE, YELLOW, GREEN SOLAMENTE
+                                    print('red[k].y: ',red[k].y)                    #Y CREAR FUNCIONES QUE SIEMPRE SE ACTIVEN PARA RESIVRLOS Y MOVERLOS
+
 
                                 if nc > len(rolls) - 1:           # check if all moves are made. so next players turn.
                                     GREEN = True
@@ -496,10 +513,21 @@ def main():                                 # Main game function.
 
                             if rolls[0 + nc] == 6 or rolls[0 + nc] == 1:
 
-                                blue[i].x0 = bluebox[0].x
-                                blue[i].y0 = bluebox[0].y
-                                blue[i].x = bluebox[0].x + 25
-                                blue[i].y = bluebox[0].y + 25
+
+                                print('-----------antes-------------')
+                                print('blue[i].x0: ',blue[i].x0)
+                                print('blue[i].y0: ',blue[i].y0)
+                                print('blue[i].x: ',blue[i].x)
+                                print('blue[i].y: ',blue[i].y)              #If a six occurs and gamepiece is in home  #Game piece is moved onto the home box
+                                print('-----------despues-------------')
+                                blue[i].x0 = bluebox[0].x                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X
+                                print('blue[i].x0: ',blue[i].x0)
+                                blue[i].y0 = bluebox[0].y                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y
+                                print('blue[i].y0: ',blue[i].y0)
+                                blue[i].x = bluebox[0].x + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('blue[i].x: ',blue[i].x)
+                                blue[i].y = bluebox[0].y + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('blue[i].y: ',blue[i].y)
                                 blue[i].num = 0
                                 blue[i].swap()
                                 nc = nc + 1
@@ -561,13 +589,24 @@ def main():                                 # Main game function.
 
                             if rolls[0 + nc] == 6 or rolls[0 + nc] == 1:
 
-                                yellow[i].x0 = yellowbox[0].x
-                                yellow[i].y0 = yellowbox[0].y
-                                yellow[i].x = yellowbox[0].x + 25
-                                yellow[i].y = yellowbox[0].y + 25
+                                print('-----------antes-------------')
+                                print('yellow[i].x0: ',yellow[i].x0)
+                                print('yellow[i].y0: ',yellow[i].y0)
+                                print('yellow[i].x: ',yellow[i].x)
+                                print('yellow[i].y: ',yellow[i].y)              #If a six occurs and gamepiece is in home  #Game piece is moved onto the home box
+                                print('-----------despues-------------')
+                                yellow[i].x0 = yellowbox[0].x                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X
+                                print('yellow[i].x0: ',yellow[i].x0)
+                                yellow[i].y0 = yellowbox[0].y                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y
+                                print('yellow[i].y0: ',yellow[i].y0)
+                                yellow[i].x = yellowbox[0].x + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('yellow[i].x: ',yellow[i].x)
+                                yellow[i].y = yellowbox[0].y + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('yellow[i].y: ',yellow[i].y)
                                 yellow[i].num = 0
                                 yellow[i].swap()
                                 nc = nc + 1
+
 
                                 if nc > len(rolls) - 1:
                                     YELLOW = False
@@ -627,13 +666,24 @@ def main():                                 # Main game function.
 
                             if rolls[0 + nc] == 6 or rolls[0 + nc] == 1:
 
-                                green[i].x0 = greenbox[0].x
-                                green[i].y0 = greenbox[0].y
-                                green[i].x = greenbox[0].x + 25
-                                green[i].y = greenbox[0].y + 25
+                                print('-----------antes-------------')
+                                print('green[i].x0: ',green[i].x0)
+                                print('green[i].y0: ',green[i].y0)
+                                print('green[i].x: ',green[i].x)
+                                print('green[i].y: ',green[i].y)              #If a six occurs and gamepiece is in home  #Game piece is moved onto the home box
+                                print('-----------despues-------------')
+                                green[i].x0 = greenbox[0].x                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X
+                                print('green[i].x0: ',green[i].x0)
+                                green[i].y0 = greenbox[0].y                         # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y
+                                print('green[i].y0: ',green[i].y0)
+                                green[i].x = greenbox[0].x + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS X, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('green[i].x: ',green[i].x)
+                                green[i].y = greenbox[0].y + 25                     # ACA EN DONDE SE POSICIONA EN EL EJE DE LAS Y, PERO POSICIONANDO EN LA MITAD DEL CONTENEDOR
+                                print('green[i].y: ',green[i].y)
                                 green[i].num = 0
                                 green[i].swap()
                                 nc = nc + 1
+
                                 print("green x.y: ", green[i].x0, green[i].y0)
 
                                 if nc > len(rolls) - 1:
@@ -770,7 +820,7 @@ def movecheck(r, rh, rb, la):       #Check if the player can make a move
     win=True                                                  #Checking if the game is won or the player can make any moves.
     for j in range(4):
         if (r[j].x0 != rb[56].x) and (r[j].y0 != rb[56].y):
-             win=False
+            win=False
 
     if win == True:                                         #If all gamepieces home, prints that the player has won
         print("YOU HAVE WON")
